@@ -1,20 +1,153 @@
-<!DOCTYPE html>
-<html lang="en">
-<meta charset="UTF-8">
-<title>Page Title</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="">
-<style>
-</style>
-<script src=""></script>
+<html><head>
+2
+    <meta charset="utf-8">
+3
+    <meta content="stuff, to, help, search, engines, not" name="keywords">
+4
+    <meta content="What this page is about." name="description">
+5
+    <meta content="WHERE WE DROPPIN" name="title">
+6
+    <title>Where We Droppin?</title>
+7
+ 
+8
+    <style>
+9
+        h1{
+10
+            text-align: center;
+11
+        }
+12
+        h3{
+13
+            text-align: center;
+14
+        }
+15
+        div{
+16
+            margin: 0;
+17
+            position: absolute;
+18
+            left: 30%;
+19
+            top: 18%
+20
+        }
+21
+        body{
+22
+            background-color: gray;
+23
+        }
+24
+        button{
+25
+            color: white;
+26
+            background-color: black;
+27
+        }
+28
+    </style>
+29
+</head>
+30
+ 
+31
 <body>
-
-
-<div class="">
- <h1>This is a Heading</h1>
- <p>This is a paragraph.</p>
- <p>This is another paragraph.</p>
-</div>
-
-</body>
-</html>
+32
+    <h1 id="bigMessage" class="highlight summer">WHERE WE DROPPING???</h1>
+33
+    <h3> Where is the circle? </h3>
+34
+   
+35
+    <div>
+36
+    <button onclick="topLeft()">Top Left Quadrant</button>
+37
+    <button onclick="topRight()">Top Right Quadrant</button>
+38
+    <button onclick="bottomLeft()">Bottom Left Quadrant</button>
+39
+    <button onclick="bottomRight()">Bottom Right Quadrant</button> 
+40
+    </div>     
+41
+    <script>
+42
+        function topRight() {  
+43
+            alert(tr);
+44
+            window.location.reload(true);
+45
+        } 
+46
+        function topLeft(){
+47
+            alert(tl);
+48
+            window.location.reload(true);
+49
+        }    
+50
+        function bottomLeft(){
+51
+            alert(bl);
+52
+            window.location.reload(true);
+53
+        } 
+54
+        function bottomRight(){
+55
+            alert(br);
+56
+            window.location.reload(true);
+57
+        } 
+58
+        var tlArray = ['We are Dropping Mili!', 'We are Dropping Summit!', 'We are Dropping Airport!', 'We are Dropping TV!', 'We are Dropping Storage!', 'We are Dropping Factory!'];
+59
+ 
+60
+        var trArray = ['We are Dropping Salt Mine!', 'We are Dropping Fire Station!', 'We are Dropping Array!', 'We are Dropping TV!', 'We are Dropping Stadium!', 'We are Dropping Lumber!'];
+61
+ 
+62
+        var blArray = ['We are Dropping Promenade West!', 'We are Dropping Boneyard!', 'We are Dropping Promenade East!', 'We are Dropping Hills!', 'We are Dropping Hospital!', 'We are Dropping Park!', 'We are Dropping Super!', 'We are Dropping Factory!', 'We are Dropping Storage!']
+63
+ 
+64
+        var brArray = ['We are Dropping Prison!', 'We are Dropping Farm!', 'We are Dropping Lumber!', 'We are Dropping Park!', 'We are Dropping Port!', 'We are Dropping Downtown!', 'We are Dropping Stadium!']
+65
+ 
+66
+        var tl = tlArray[Math.floor(Math.random() * tlArray.length)];
+67
+ 
+68
+        var tr = trArray[Math.floor(Math.random() * trArray.length)];
+69
+ 
+70
+        var bl = blArray[Math.floor(Math.random() * blArray.length)];
+71
+ 
+72
+        var br = brArray[Math.floor(Math.random() * brArray.length)];
+73
+       
+74
+    </script>
+75
+​
+76
+ 
+77
+</body></html>
