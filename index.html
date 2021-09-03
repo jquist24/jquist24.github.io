@@ -1,8 +1,12 @@
-<html><head>
+<html>
+
+<head>
 
     <meta charset="utf-8">
 
     <meta content="stuff, to, help, search, engines, not" name="keywords">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <meta content="What this page is about." name="description">
 
@@ -10,139 +14,152 @@
 
     <title>Where We Droppin?</title>
 
- 
+
 
     <style>
-
-        h1{
-
+        h1 {
+            margin-top:5%;
             text-align: center;
 
         }
 
-        h3{
-
+        h2 {
             text-align: center;
-
         }
 
-        div{
+        div {
 
-            margin: 0;
+            margin: auto;
 
-            position: absolute;
-
-            left: 30%;
-
-            top: 18%
-
+            width: 80%;
+            padding: 10px;
         }
 
-        body{
+        body {
 
             background-color: gray;
 
         }
-        button{
+
+        .center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .botcenter{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            
+            font-size: 20px;
 
             color: white;
 
             background-color: black;
 
-        }
+            padding-right: 5px;
 
+        }
     </style>
 
 </head>
 
- 
+
 
 <body>
 
     <h1 id="bigMessage" class="highlight summer">WHERE WE DROPPING???</h1>
 
-    <h3> Where is the circle? </h3>
+    <h2> Where is the circle? </h2>
 
-   
 
-    <div>
 
-    <button onclick="topLeft()">Top Left Quadrant</button>
+    <div class="center">
 
-    <button onclick="topRight()">Top Right Quadrant</button>
+        <button onclick="topLeft()">Top Left Quadrant</button>
 
-    <button onclick="bottomLeft()">Bottom Left Quadrant</button>
+        <button onclick="topRight()">Top Right Quadrant</button>
+        </div>
+        <div class="botcenter">
 
-    <button onclick="bottomRight()">Bottom Right Quadrant</button>
-    </div>     
+        <button onclick="bottomLeft()">Bottom Left Quadrant</button>
+
+        <button onclick="bottomRight()">Bottom Right Quadrant</button>
+    </div>
 
     <script>
 
-        function topRight() {  
+        function topRight() {
 
             alert(tr);
 
             window.location.reload(true);
-        } 
+        }
 
-        function topLeft(){
+        function topLeft() {
 
             alert(tl);
 
             window.location.reload(true);
 
-        }    
+        }
 
-        function bottomLeft(){
+        function bottomLeft() {
 
             alert(bl);
 
             window.location.reload(true);
 
-        } 
+        }
 
-        function bottomRight(){
+        function bottomRight() {
 
             alert(br);
             window.location.reload(true);
 
-        } 
+        }
 
         var tlArray = ['We are Dropping Mili!', 'We are Dropping Summit!', 'We are Dropping Airport!', 'We are Dropping TV!', 'We are Dropping Storage!', 'We are Dropping Factory!'];
 
- 
+
 
         var trArray = ['We are Dropping Salt Mine!', 'We are Dropping Fire Station!', 'We are Dropping Array!', 'We are Dropping TV!', 'We are Dropping Stadium!', 'We are Dropping Lumber!'];
 
- 
+
 
         var blArray = ['We are Dropping Promenade West!', 'We are Dropping Boneyard!', 'We are Dropping Promenade East!', 'We are Dropping Hills!', 'We are Dropping Hospital!', 'We are Dropping Park!', 'We are Dropping Super!', 'We are Dropping Factory!', 'We are Dropping Storage!']
 
- 
+
         var brArray = ['We are Dropping Prison!', 'We are Dropping Farm!', 'We are Dropping Lumber!', 'We are Dropping Park!', 'We are Dropping Port!', 'We are Dropping Downtown!', 'We are Dropping Stadium!']
 
- 
+
 
         var tl = tlArray[Math.floor(Math.random() * tlArray.length)];
 
- 
+
 
         var tr = trArray[Math.floor(Math.random() * trArray.length)];
 
- 
+
 
         var bl = blArray[Math.floor(Math.random() * blArray.length)];
 
- 
+
 
         var br = brArray[Math.floor(Math.random() * brArray.length)];
 
-       
+
 
     </script>
 
-​
+    ​
 
- 
 
-</body></html>
+
+</body>
+
+</html>
