@@ -1,20 +1,12 @@
 <html>
-
 <head>
-
     <meta charset="utf-8">
-
     <meta content="stuff, to, help, search, engines, not" name="keywords">
-
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
     <meta content="What this page is about." name="description">
-
     <meta content="WHERE WE DROPPIN" name="title">
-
     <title>Where We Droppin?</title>
-
-
+    
     <style>
 body {
   background-image: url('wz.jpg');
@@ -26,7 +18,9 @@ body {
             margin-top:5%;
             text-align: center;
             color: rgb(228, 226, 226);
-
+        }
+        p{
+            color:white;
         }
 
         h2 {
@@ -35,17 +29,13 @@ body {
         }
 
         div {
-
             margin: auto;
-
             width: 80%;
             padding: 10px;
         }
 
         body {
-
             background-color: gray;
-
         }
 
         .center{
@@ -60,112 +50,100 @@ body {
             align-items: center;
         }
 
-        button {
-            
+        button { 
             font-size: 20px;
-
             color: white;
-
             background-color: black;
-
             padding-right: 5px;
-
         }
     </style>
-
 </head>
-
-
-
 <body>
-
     <h1 id="bigMessage" class="highlight summer">WHERE WE DROPPING???</h1>
-
     <h2> Where is the circle? </h2>
-
-
-
     <div class="center">
-
         <button onclick="topLeft()">Top Left Quadrant</button>
-
+        <p id="tl"></p>
         <button onclick="topRight()">Top Right Quadrant</button>
-        </div>
+        <p id="tr"></p>
+    </div>
         <div class="botcenter">
-
         <button onclick="bottomLeft()">Bottom Left Quadrant</button>
-
+        <p id="bl"></p>
         <button onclick="bottomRight()">Bottom Right Quadrant</button>
+        <p id="br"></p>
+    </div>
+    <div>
+        <h2>Loadout Generator</h2>
+        <h3>What type of gun do you want to run?</h3>
+        <button onclick="snipe()">Sniper</button>
+        <p id="snipe"></p>
+        <button onclick="ar()">Assault Rifle</button> 
+        <p id="ar"></p>
+        <button onclick="lmg()">LMG</button> 
+        <p id="lmg"></p>
+        <button onclick="smg()">SMG</button>   
+        <p id="smg"></p> 
     </div>
 
     <script>
+        var result;
+
+        function snipe() {
+            var snipe = snipeArray[Math.floor(Math.random() * snipeArray.length)];
+            document.getElementById("snipe").innerHTML=snipe;
+        }
+        function ar() {
+            var ar = arArray[Math.floor(Math.random() * arArray.length)];
+            document.getElementById("ar").innerHTML=ar;
+        }
+        function lmg() {
+            var lmg = lmgArray[Math.floor(Math.random() * lmgArray.length)];
+            document.getElementById("lmg").innerHTML=lmg;
+        }
+        function smg() {
+            var smg = smgArray[Math.floor(Math.random() * smgArray.length)];
+            document.getElementById("smg").innerHTML=smg;
+        }
+
 
         function topRight() {
-
-            alert(tr);
-
-            window.location.reload(true);
+            var tr = trArray[Math.floor(Math.random() * trArray.length)];
+            document.getElementById("tr").innerHTML=tr;
         }
 
         function topLeft() {
-
-            alert(tl);
-
-            window.location.reload(true);
-
+            var tl = tlArray[Math.floor(Math.random() * tlArray.length)];
+            document.getElementById("tl").innerHTML=tl;
         }
 
         function bottomLeft() {
-
-            alert(bl);
-
-            window.location.reload(true);
-
+            var bl = blArray[Math.floor(Math.random() * blArray.length)];
+            document.getElementById("bl").innerHTML=bl;
         }
 
-        function bottomRight() {
-
-            alert(br);
-            window.location.reload(true);
+        function bottomRight() {        
+            var br = brArray[Math.floor(Math.random() * brArray.length)];
+            document.getElementById("br").innerHTML=br;
 
         }
 
         var tlArray = ['We are Dropping Mili!', 'We are Dropping Summit!', 'We are Dropping Airport!', 'We are Dropping TV!', 'We are Dropping Storage!', 'We are Dropping Factory!'];
-
-
-
         var trArray = ['We are Dropping Salt Mine!', 'We are Dropping Fire Station!', 'We are Dropping Array!', 'We are Dropping TV!', 'We are Dropping Stadium!', 'We are Dropping Lumber!'];
+        var blArray = ['We are Dropping Promenade West!', 'We are Dropping Boneyard!', 'We are Dropping Promenade East!', 'We are Dropping Hills!', 'We are Dropping Hospital!', 'We are Dropping Park!',
+         'We are Dropping Super!', 'We are Dropping Factory!', 'We are Dropping Storage!']
+        var brArray = ['We are Dropping Prison!', 'We are Dropping Farm!', 'We are Dropping Lumber!', 'We are Dropping Park!', 'We are Dropping Port!', 'We are Dropping Downtown!',
+         'We are Dropping Stadium!']
 
-
-
-        var blArray = ['We are Dropping Promenade West!', 'We are Dropping Boneyard!', 'We are Dropping Promenade East!', 'We are Dropping Hills!', 'We are Dropping Hospital!', 'We are Dropping Park!', 'We are Dropping Super!', 'We are Dropping Factory!', 'We are Dropping Storage!']
-
-
-        var brArray = ['We are Dropping Prison!', 'We are Dropping Farm!', 'We are Dropping Lumber!', 'We are Dropping Park!', 'We are Dropping Port!', 'We are Dropping Downtown!', 'We are Dropping Stadium!']
-
-
-
-        var tl = tlArray[Math.floor(Math.random() * tlArray.length)];
-
-
-
-        var tr = trArray[Math.floor(Math.random() * trArray.length)];
-
-
-
-        var bl = blArray[Math.floor(Math.random() * blArray.length)];
-
-
-
-        var br = brArray[Math.floor(Math.random() * brArray.length)];
-
+        var snipeArray = ['kar', 'swiss', 'm82'];
+        var arArray = ['ak', 'kilo', 'krig'];
+        var lmgArray = ['mg82', 'bruen', 'm91'];
+        var smgArray = ['mp7', 'pp', 'mp5'];
+        
+        
 
 
     </script>
-
-    ​
-
-
 
 </body>
 
